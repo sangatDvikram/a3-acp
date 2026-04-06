@@ -1,0 +1,463 @@
+<html><head><title>A3 Option's Calculator.html</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+<meta name="GENERATOR" content="" />
+<style type="text/css">
+
+.eebuttons {width:120px}*.ee100 { color : windowtext; font-family : "Times New Roman" , serif;
+font-size : 12.00pt; font-style : normal; font-weight : 400;
+padding-left : 1px; padding-right : 1px; padding-top : 1px;
+text-align : left; vertical-align : bottom }
+*.ee103 { color : windowtext; font-family : "Times New Roman" , serif;
+font-size : 12.00pt; font-style : normal; font-weight : 400;
+padding-left : 1px; padding-right : 1px; padding-top : 1px;
+text-align : center; vertical-align : bottom }
+*.ee106 { color : #0000D4; font-family : "Times New Roman" , serif;
+font-size : 12.00pt; font-style : normal; font-weight : 400;
+padding-left : 1px; padding-right : 1px; padding-top : 1px;
+text-align : center; vertical-align : bottom }
+*.ee108 { color : #DD0806; font-family : "Times New Roman" , serif;
+font-size : 12.00pt; font-style : normal; font-weight : 400;
+padding-left : 1px; padding-right : 1px; padding-top : 1px;
+text-align : center; vertical-align : bottom }
+*.ee110 { color : windowtext; font-family : "Times New Roman" , serif;
+font-size : 12.00pt; font-style : normal; font-weight : 700;
+padding-left : 1px; padding-right : 1px; padding-top : 1px;
+text-align : center; vertical-align : bottom }
+*.ee116 { background : #CCFFCC; border : 1.00pt solid windowtext;
+color : #3366FF; font-family : "Times New Roman" , serif;
+font-size : 12.00pt; font-style : normal; font-weight : 400;
+padding-left : 0px; padding-right : 1px; padding-top : 0px;
+text-align : right; vertical-align : bottom }
+*.ee118 { background : #CCFFCC; color : #3366FF;
+font-family : "Times New Roman" , serif; font-size : 12.00pt;
+font-style : normal; font-weight : 400; text-align : right;
+vertical-align : bottom }
+*.ee119 { background : #CCFFCC; border : 1.00pt solid windowtext;
+color : #DD0806; font-family : "Times New Roman" , serif;
+font-size : 12.00pt; font-style : normal; font-weight : 400;
+padding-left : 0px; padding-right : 1px; padding-top : 0px;
+text-align : right; vertical-align : bottom }
+*.ee120 { background : #CCFFCC; color : #DD0806;
+font-family : "Times New Roman" , serif; font-size : 12.00pt;
+font-style : normal; font-weight : 400; text-align : right;
+vertical-align : bottom }
+*.ee121 { background : #CCFFCC; border : 1.00pt solid windowtext;
+color : windowtext; font-family : "Times New Roman" , serif;
+font-size : 12.00pt; font-style : normal; font-weight : 400;
+padding-left : 0px; padding-right : 1px; padding-top : 0px;
+text-align : right; vertical-align : bottom }
+*.ee122 { background : #CCFFCC; color : windowtext;
+font-family : "Times New Roman" , serif; font-size : 12.00pt;
+font-style : normal; font-weight : 400; text-align : right;
+vertical-align : bottom }
+*.ee123 { color : windowtext; font-family : "Times New Roman" , serif;
+font-size : 12.00pt; font-style : normal; font-weight : 700;
+padding-left : 1px; padding-right : 1px; padding-top : 1px;
+text-align : left; vertical-align : bottom }
+*.ee126 { color : windowtext; font-family : "Times New Roman" , serif;
+font-size : 12.00pt; font-style : normal; font-weight : 400;
+padding-left : 0px; padding-right : 1px; padding-top : 0px;
+text-align : right; vertical-align : bottom }
+*.ee127 { color : windowtext; font-family : "Times New Roman" , serif;
+font-size : 12.00pt; font-style : normal; font-weight : 400;
+text-align : right; vertical-align : bottom }
+*.ee128 { background : #CCFFFF; border : 1.00pt solid windowtext;
+color : windowtext; font-family : "Times New Roman" , serif;
+font-size : 12.00pt; font-style : normal; font-weight : 400;
+padding-left : 0px; padding-right : 1px; padding-top : 0px;
+text-align : right; vertical-align : bottom }
+*.ee129 { background : #CCFFFF; color : windowtext;
+font-family : "Times New Roman" , serif; font-size : 12.00pt;
+font-style : normal; font-weight : 400; text-align : right;
+vertical-align : bottom }
+*.ee130 { border : 1.00pt solid #33CCCC; color : windowtext;
+font-family : "Times New Roman" , serif; font-size : 12.00pt;
+font-style : normal; font-weight : 400; padding-left : 0px;
+padding-right : 1px; padding-top : 0px; text-align : right;
+vertical-align : bottom }
+*.ee131 { border : 1.00pt solid #00ABEA; color : windowtext;
+font-family : "Times New Roman" , serif; font-size : 12.00pt;
+font-style : normal; font-weight : 400; padding-left : 0px;
+padding-right : 1px; padding-top : 0px; text-align : right;
+vertical-align : bottom }
+
+*.ee900 { font-size : 10.00pt; color : #3333ff;
+font-family : "Arial", Sans-serif; border-bottom : 3px solid #3333ff;
+border-right : 3px solid #3333ff; border-top : 3px solid #3333ff;
+border-left : 3px solid #3333ff }
+textarea {  overflow: auto; }
+</style>
+<style type="text/css" media="screen">
+.eebuttonbar_top {margin-bottom:6px;padding-bottom:6px;border-bottom: 2px solid blue}
+.eebuttonbar_bottom {margin-top:6px;padding-top:6px;border-top: 2px solid blue}
+.eetabs {display:block;}</style>
+<style type="text/css" media="print">
+.eebuttonbar_top {display:none;}
+.eebuttonbar_bottom {display:none;}
+.eetabs {display:none;}</style>
+<script language="javascript">
+
+
+var co = new Object;
+function recalc_onclick(ctl) {
+  if (true) {
+
+
+co.pA2D=eeparseFloat(document.formc.pA2D.value);co.pA2E=eeparseFloat(document.formc.pA2E.value);co.pA2F=eeparseFloat(document.formc.pA2F.value);co.pA4C=eeparseFloat(document.formc.pA4C.value);co.pA5C=eeparseFloat(document.formc.pA5C.value);co.pA7C=eeparseFloat(document.formc.pA7C.value);co.pA8C=eeparseFloat(document.formc.pA8C.value);co.pA9C=eeparseFloat(document.formc.pA9C.value);co.pA10C=eeparseFloat(document.formc.pA10C.value);calc(co);document.formc.pA3D.value=eedisplayFloat(co.pA3D);document.formc.pA3E.value=eedisplayFloat(co.pA3E);document.formc.pA3F.value=eedisplayFloat(co.pA3F);document.formc.pA3H.value=eedisplayFloat(co.pA3H);document.formc.pA4H.value=eedisplayFloat(co.pA4H);document.formc.pA5H.value=eedisplayFloat(co.pA5H);document.formc.pA7H.value=eedisplayFloat(co.pA7H);document.formc.pA8H.value=eedisplayFloat(co.pA8H);document.formc.pA9H.value=eedisplayFloatNDTh(co.pA9H,0);document.formc.pA10H.value=eedisplayFloatNDTh(co.pA10H,0);
+};};
+
+
+var eeisus=1;var eetrue="TRUE";var eefalse="FALSE";var eedec=".";var eeth=",";var eedecreg=new RegExp("[.]","g");var eethreg=new RegExp(",","g");
+
+function calc(data){var cA2D=data.pA2D;var cA2E=data.pA2E;var cA2F=data.pA2F;var cA4C=data.pA4C;var cA5C=data.pA5C;var cA7C=data.pA7C;var cA8C=data.pA8C;var cA9C=data.pA9C;var cA10C=data.pA10C;var cA3D=(((cA2D)*(16384)));var cA3E=(((cA2E)*(1048576)));var cA3F=(((cA2F)*(67108864)));var cA4H=(((((cA4C)==(-1)))?(-16):(((((cA4C)==(0)))?(0):(16)))));var cA5H=(((cA5C)-(1)));var cA7H=(((((cA7C)==(-1)))?(-32768):(((((cA7C)==(0)))?(0):(32768)))));var cA8H=(((((cA8C)==(-1)))?(-196608):(((((cA8C)==(0)))?(0):(196608)))));var cA9H=(((((cA7H)+(cA8H)))+(cA9C)));var cA3H=(((((cA3D)+(cA3E)))+(cA3F)));var cA10H=(((((((cA3H)+(cA4H)))+(cA5H)))+(cA10C)));data.pA3D=cA3D;data.pA3E=cA3E;data.pA3F=cA3F;data.pA3H=cA3H;data.pA4H=cA4H;data.pA5H=cA5H;data.pA7H=cA7H;data.pA8H=cA8H;data.pA9H=cA9H;data.pA10H=cA10H;};
+
+function myIsNaN(x){return(isNaN(x)||(typeof x=='number'&&!isFinite(x)));};function round(n,nd){if(isFinite(n)&&isFinite(nd)){var sign_n=(n<0)?-1:1;var abs_n=Math.abs(n);var factor=Math.pow(10,nd);return sign_n*Math.round(abs_n*factor)/factor;}else{return NaN;}};function eeparseFloat(str){str=String(str).replace(eedecreg,".");var res=parseFloat(str);if(isNaN(res)){return 0;}else{return res;}};function eedisplayFloat(x){if(myIsNaN(x)){return Number.NaN;}else{return String(x).replace(/\./g,eedec);}};function eedisplayFloatNDTh(x,nd){if(myIsNaN(x)){return Number.NaN;}else{var res=round(x,nd);if(nd>0){var str=String(res);if(str.indexOf('e')!=-1)return str;if(str.indexOf('E')!=-1)return str;var parts=str.split('.');var res2=eeinsertThousand(parts[0].toString());if(parts.length<2){var decimals=('00000000000000').substring(0,nd);return(res2+eedec+decimals);}else{var decimals=((parts[1]).toString()+'00000000000000').substring(0,nd);return(res2+eedec+decimals);}}else{return(eeinsertThousand(res.toString()));}}};function eeinsertThousand(whole){if(whole==""||whole.indexOf("e")>=0){return whole;}else{var minus_sign="";if(whole.charAt(0)=="-"){minus_sign="-";whole=whole.substring(1);};var res="";var str_length=whole.length-1;for(var ii=0;ii<=str_length;ii++){if(ii>0&&ii%3==0){res=eeth+res;};res=whole.charAt(str_length-ii)+res;};return minus_sign+res;}};
+</script>
+
+</head><body onload="initial_update();document.formc.pA2D.focus();"   >
+<table id="_TRIAL_MSG" style='border-collapse:collapse'  border="0" cellspacing="0" cellpadding="2" bgcolor="#FFFFFF">
+</table>
+   <form id="formc" name="formc" method="post" action="">
+<script language="javascript">
+  var submitted = false;
+  function check_submit()
+  {
+     if (submitted) {
+        alert("You have already submitted the form.  Please be patient.");
+        submitted = false;
+                            
+        return false;
+     } else {
+        recalc_onclick('');   // force recalc before submit
+        submitted = true;
+        document.formc.submit();
+        return true;
+     }
+  }
+</script>
+
+<div class="eebuttonbar_top">
+<center><font size="5">A3 Option's Calculator</font>
+</center>
+</div>
+
+<div id="panel1" style='display:block'>
+     <table  style='border-collapse:collapse;width:692pt'  border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" >
+       <col width="25.00" />
+       <col width="92.00" />
+       <col width="59.00" />
+       <col width="110.00" />
+       <col width="110.00" />
+       <col width="74.00" />
+       <col width="44.00" />
+       <col width="98.00" />
+       <col width="80.00" />
+               <tr style='height:17pt'>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee103'    >
+                        Input
+                           </td>
+                           <td    class='ee106'    >
+                        Ice
+                           </td>
+                           <td    class='ee108'    >
+                        Fire
+                           </td>
+                           <td    class='ee103'    >
+                        Light
+                           </td>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee110'    >
+                        Total
+                           </td>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+               </tr>
+               <tr style='height:17pt'>
+                           <td    class='ee100'   colspan="3" >
+                        &nbsp;
+                           </td>
+                           <td    class='ee116'    >
+                             <input value="0" name="pA2D" id="pA2D" type="text"
+                              onblur="this.value=eedisplayFloat(eeparseFloat(this.value));recalc_onclick('pA2D')" tabindex="1"
+                              style=' width:100% '
+            class='ee118' >
+                           </td>
+                           <td    class='ee119'    >
+                             <input value="0" name="pA2E" id="pA2E" type="text"
+                              onblur="this.value=eedisplayFloat(eeparseFloat(this.value));recalc_onclick('pA2E')" tabindex="2"
+                              style=' width:100% '
+            class='ee120' >
+                           </td>
+                           <td    class='ee121'    >
+                             <input value="0" name="pA2F" id="pA2F" type="text"
+                              onblur="this.value=eedisplayFloat(eeparseFloat(this.value));recalc_onclick('pA2F')" tabindex="3"
+                              style=' width:100% '
+            class='ee122' >
+                           </td>
+                           <td    class='ee100'   colspan="3" >
+                        &nbsp;
+                           </td>
+               </tr>
+               <tr style='height:17pt'>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee123'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee126'    >
+                             <input value="0" name="pA3D" id="pA3D" type="text"
+                              tabindex="-1" readonly="true"
+                              style='overflow:hidden; border:0px solid #000000; width:100% '
+            class='ee127' >
+                           </td>
+                           <td    class='ee126'    >
+                             <input value="0" name="pA3E" id="pA3E" type="text"
+                              tabindex="-1" readonly="true"
+                              style='overflow:hidden; border:0px solid #000000; width:100% '
+            class='ee127' >
+                           </td>
+                           <td    class='ee126'    >
+                             <input value="0" name="pA3F" id="pA3F" type="text"
+                              tabindex="-1" readonly="true"
+                              style='overflow:hidden; border:0px solid #000000; width:100% '
+            class='ee127' >
+                           </td>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee126'    >
+                             <input value="0" name="pA3H" id="pA3H" type="text"
+                              tabindex="-1" readonly="true"
+                              style='overflow:hidden; border:0px solid #000000; width:100% '
+            class='ee127' >
+                           </td>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+               </tr>
+               <tr style='height:17pt'>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee123'    >
+                           </td>
+                           <td    class='ee100'   colspan="7" >
+                        &nbsp;
+                           </td>
+               </tr>
+               <tr style='height:17pt'>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee100'    >
+                        +Attk (-1, 0, 1)
+                           </td>
+                           <td    class='ee128'    >
+                             <input value="0" name="pA4C" id="pA4C" type="text"
+                              onblur="this.value=eedisplayFloat(eeparseFloat(this.value));recalc_onclick('pA4C')" tabindex="4"
+                              style=' width:100% '
+            class='ee129' >
+                           </td>
+                           <td    class='ee100'   colspan="4" >
+                        &nbsp;
+                           </td>
+                           <td    class='ee126'    >
+                             <input value="0" name="pA4H" id="pA4H" type="text"
+                              tabindex="-1" readonly="true"
+                              style='overflow:hidden; border:0px solid #000000; width:100% '
+            class='ee127' >
+                           </td>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+               </tr>
+               <tr style='height:17pt'>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee100'    >
+                        +15
+                           </td>
+                           <td    class='ee121'    >
+                             <input value="1" name="pA5C" id="pA5C" type="text"
+                              onblur="this.value=eedisplayFloat(eeparseFloat(this.value));recalc_onclick('pA5C')" tabindex="5"
+                              style=' width:100% '
+            class='ee122' >
+                           </td>
+                           <td    class='ee100'   colspan="4" >
+                        &nbsp;
+                           </td>
+                           <td    class='ee126'    >
+                             <input value="0" name="pA5H" id="pA5H" type="text"
+                              tabindex="-1" readonly="true"
+                              style='overflow:hidden; border:0px solid #000000; width:100% '
+            class='ee127' >
+                           </td>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+               </tr>
+
+               <tr style='height:17pt'>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee123'    >
+                           </td>
+                           <td    class='ee100'   colspan="7" >
+                        &nbsp;
+                           </td>
+               </tr>
+
+               <tr style='height:17pt'>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee123'    >
+                        Value
+                           </td>
+                           <td    class='ee100'   colspan="7" >
+                        &nbsp;
+                           </td>
+               </tr>
+               <tr style='height:17pt'>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee100'    >
+                        +Bless (-1, 0, 1)
+                           </td>
+                           <td    class='ee128'    >
+                             <input value="0" name="pA7C" id="pA7C" type="text"
+                              onblur="this.value=eedisplayFloat(eeparseFloat(this.value));recalc_onclick('pA7C')" tabindex="6"
+                              style=' width:100% '
+            class='ee129' >
+                           </td>
+                           <td    class='ee100'   colspan="4" >
+                        &nbsp;
+                           </td>
+                           <td    class='ee126'    >
+                             <input value="0" name="pA7H" id="pA7H" type="text"
+                              tabindex="-1" readonly="true"
+                              style='overflow:hidden; border:0px solid #000000; width:100% '
+            class='ee127' >
+                           </td>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+               </tr>
+               <tr style='height:17pt'>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee100'    >
+                        -30 (-1, 0, 1)
+                           </td>
+                           <td    class='ee121'    >
+                             <input value="0" name="pA8C" id="pA8C" type="text"
+                              onblur="this.value=eedisplayFloat(eeparseFloat(this.value));recalc_onclick('pA8C')" tabindex="7"
+                              style=' width:100% '
+            class='ee122' >
+                           </td>
+                           <td    class='ee100'   colspan="4" >
+                        &nbsp;
+                           </td>
+                           <td    class='ee126'    >
+                             <input value="0" name="pA8H" id="pA8H" type="text"
+                              tabindex="-1" readonly="true"
+                              style='overflow:hidden; border:0px solid #000000; width:100% '
+            class='ee127' >
+                           </td>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+               </tr>
+               <tr style='height:17pt'>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee123'    >
+                           </td>
+                           <td    class='ee100'   colspan="7" >
+                        &nbsp;
+                           </td>
+               </tr>
+               <tr style='height:17pt'>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee100'    >
+                        Val I/P &gt;&gt;&gt;
+                           </td>
+                           <td    class='ee121'    >
+                             <input value="0" name="pA9C" id="pA9C" type="text"
+                              onblur="this.value=eedisplayFloat(eeparseFloat(this.value));recalc_onclick('pA9C')" tabindex="8"
+                              style=' width:100% '
+            class='ee122' >
+                           </td>
+                           <td    class='ee100'   colspan="4" >
+                        &nbsp;
+                           </td>
+                           <td    class='ee130'    >
+                             <input value="0" name="pA9H" id="pA9H" type="text"
+                              tabindex="-1" readonly="true"
+                              style='overflow:hidden; border:0px solid #000000; width:100% '
+            class='ee127' >
+                           </td>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+               </tr>
+               <tr style='height:17pt'>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+                           <td    class='ee100'    >
+                        Attr I/P &gt;&gt;&gt;
+                           </td>
+                           <td    class='ee121'    >
+                             <input value="0" name="pA10C" id="pA10C" type="text"
+                              onblur="this.value=eedisplayFloat(eeparseFloat(this.value));recalc_onclick('pA10C')" tabindex="9"
+                              style=' width:100% '
+            class='ee122' >
+                           </td>
+                           <td    class='ee100'   colspan="4" >
+                        &nbsp;
+                           </td>
+                           <td    class='ee131'    >
+                             <input value="0" name="pA10H" id="pA10H" type="text"
+                              tabindex="-1" readonly="true"
+                              style='overflow:hidden; border:0px solid #000000; width:100% '
+            class='ee127' >
+                           </td>
+                           <td    class='ee100'    >
+                        &nbsp;
+                           </td>
+               </tr>
+         </table>
+         <p></p>
+         </div>
+
+<div class="eebuttonbar_bottom">
+
+<input class="eebuttons" type="button" value="Update" name="xl_update_bottom" onclick="recalc_onclick('')">
+<input class="eebuttons" type="button" value="Reset" name="xl_reset_bottom" onclick="reset_onclick('')">
+</div>
+
+<script language="javascript">
+function reset_onclick(x){document.formc.reset();postcode();recalc_onclick('');};function postcode(){};function eequerystring(){var querystring=document.location.search;if(querystring.length>0){variables=(querystring.substring(1)).split("&");var variable;var key;var value;for(var ii=0;ii<variables.length;ii++){variable=variables[ii].split("=");key=unescape(variable[0]);value=unescape(variable[1]);if(document.formc[key]!=null){document.formc[key].value=value;}}}}function initial_update(){postcode('');eequerystring();recalc_onclick('');}
+</script></form>
+</body></html>

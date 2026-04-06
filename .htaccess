@@ -1,0 +1,419 @@
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteOptions Inherit 
+RewriteEngine on
+
+#------------------ Website for Limited IPs ----------------#|
+#Order allow,deny										   	
+															
+#Main Office												
+#Allow from 49.207.121.14									
+#Allow from 117.248.180.33										
+#ErrorDocument 403 /404.php 								
+#-----------------------------------------------------------#|
+
+#----Force www ------#
+RewriteCond %{HTTP_HOST} !^acp\.$
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTPS}s ^on(s)|
+# RewriteRule ^ http%1://www.a3ultimate.com%{REQUEST_URI} [R=301,L]
+#-----Force www -----#
+RewriteCond %{SCRIPT_FILENAME} !-d   
+RewriteCond %{SCRIPT_FILENAME} !-f  
+RewriteRule ^Login$ login.php
+RewriteRule ^login.html$ login.php
+RewriteRule ^Login.html$ login.php
+RewriteRule ^login$ login.php
+RewriteRule ^acp$ acp.php
+RewriteRule ^ACP/$ acp.php
+RewriteRule ^Donate/$ http://www.tinyurl.com/A3Ultimate
+#RewriteRule ^Gallery/([0-9]+)/(.*)/(.*)/(.*)/$ gallery.php?rand=$1&img=$4&title=$2&char=$3
+#RewriteRule ^Gallery/error/$ gallery.php?err=1
+#RewriteRule ^Gallery/Show/$ view_gall.php?page=1
+#RewriteRule ^Gallery/Show/([a-zA-Z0-9]+)/$ show_gall.php?id=$1
+#RewriteRule ^Gallery/Show/([0-9]+)/([0-9]+)/$ show_gall.php?id=$1&&del=$2
+#RewriteRule ^Gallery/View/([0-9]+)/$ view_gall.php?page=$1
+#RewriteRule ^Gallery/View/$ view_gall.php?page=1
+#RewriteRule ^Gallery/View_m/([0-9]+)/$ view_gall_m.php?page=$1
+#RewriteRule ^Gallery/View_m/$ view_gall_m.php?page=1
+RewriteRule ^Gallery/$ index.php
+RewriteRule ^Gallery/([0-9]+)/(.*)/(.*)/(.*)/$ index.php 
+RewriteRule ^Gallery/error/$ index.php
+RewriteRule ^Gallery/Show/$ index.php
+RewriteRule ^Gallery/Show/([a-zA-Z0-9]+)/$ index.php
+RewriteRule ^Gallery/Show/([0-9]+)/([0-9]+)/$ index.php
+RewriteRule ^Gallery/View/([0-9]+)/$ index.php
+RewriteRule ^Gallery/View/$ index.php
+RewriteRule ^Gallery/View_m/([0-9]+)/$ index.php
+RewriteRule ^Gallery/View_m/$ index.php
+RewriteRule ^Gallery/$ index.php
+RewriteRule ^Guide/RebirthDetails/$ beta-rbdetails.php
+RewriteRule ^Guide/ItemOptions/$ options.php
+RewriteRule ^Guide/Crafting/$ craftinginfo.php
+RewriteRule ^Guide/Crafting/([a-zA-Z0-9_%_+_-_,_(_)_=]+)$ craftinginfo.php
+RewriteRule ^Guide/Crafting/([a-zA-Z0-9_%_+_-_,_(_)_=]+)$ craftinginfo.php#$1
+RewriteRule ^Guide/Iteminfo/item=([0-9]+)$ getcrafting.php?item=$1
+
+
+
+RewriteRule ^Home$ index.php
+RewriteRule ^Downloads/$ down.php
+RewriteRule ^Board_Of_Heroes/$ bhero.php
+RewriteRule ^Board_Of_Heroes/(.*)$ bhero.php?act=$1
+RewriteRule ^player/([a-zA-Z0-9]+)$ bheroplayer.php?player=$1
+RewriteRule ^Home.html$ boot.php
+RewriteRule ^Logout$ logout.php
+RewriteRule ^ACP/MyProfile/$ profile.php
+RewriteRule ^ACP/ReferFriend/$ refer.php
+RewriteRule ^ACP/Lore/$ lore.php
+RewriteRule ^ACP/LevelShue/$ ueneri.php
+RewriteRule ^ACP/Rebirth/$ rb.php
+RewriteRule ^ACP/OfflineTP/$ tp.php
+RewriteRule ^ACP/ChangeMana/$ mana.php
+RewriteRule ^ACP/ChangeVital/$ statchanger.php
+RewriteRule ^ACP/ChangeStr/$ statchanger.php
+RewriteRule ^ACP/ChangeDex/$ statchanger.php
+RewriteRule ^ACP/ChangeInt/$ statchanger.php
+RewriteRule ^ACP/Change/$ statchanger.php
+RewriteRule ^ACP/InventryInfo/$ auction.php
+RewriteRule ^ACP/RebirthGift/$ 405.php
+RewriteRule ^ACP/EquipShue/$ eshu.php
+RewriteRule ^ACP/ResetRebirth/$ reset.php
+RewriteRule ^(.*)\.asp$ /$1.php [R=301,NC]
+RewriteRule ^beta/paypalipn/ipn$ rb.php
+
+RewriteRule ^Eshop/$ B-eshop.php
+RewriteRule ^Eshop/([a-zA-Z0-9_%_+_-_,_(_)_=]+)$ B-eshop.php
+RewriteRule ^Eshop/([a-zA-Z0-9_%_+_-_,_(_)_=]+)$ B-eshop.php#$1
+RewriteRule ^Beta/Eshop/$ B-eshop.php
+
+RewriteRule ^Diwali-Eshop/$ Diwali-eshop.php
+RewriteRule ^Diwali-Eshop/([a-zA-Z0-9_%_+_-_,_(_)_=]+)$ Diwali-eshop.php
+RewriteRule ^Diwali-Eshop/([a-zA-Z0-9_%_+_-_,_(_)_=]+)$ Diwali-eshop.php#$1
+RewriteRule ^Diwali-Beta/Eshop/$ Diwali-eshop.php
+
+RewriteRule ^ACP/ConvertCoins/$ coins.php
+RewriteRule ^ACP/ConvertGos/$ gos.php
+RewriteRule ^ACP/SellUnique/$ selluniq.php
+#RewriteRule ^betmsgmsgmsgms.asp$ betmsgmsgmsgms.asp
+RewriteRule ^ACP/ConvertGold/$ gold.php
+RewriteRule ^ACP/ConvertOp/$ onlinepoints.php
+RewriteRule ^ACP/ConvertOnline/$ op.php
+RewriteRule ^ACP/ConvertBar/$ goldbar.php
+RewriteRule ^ACP/ExpBook/$ usebook.php
+RewriteRule ^ACP/WeaponLevel/$ lvl.php
+RewriteRule ^ACP/BuySkills/$ skills.php
+RewriteRule ^ACP/BuyUniqueSkills/$ uskills.php
+RewriteRule ^ACP/LevelUp/$ levelmeup.php
+RewriteRule ^ACP/BuySSS/$ sss.php
+RewriteRule ^ACP/UnstuckAccount/$ loginrestart.php
+RewriteRule ^ACP/Storage/$ player_storage.php
+RewriteRule ^ACP/All-Stat-Changer/$ statchanger.php
+RewriteRule ^ACP/EshopHistory/$ ehist1.php
+RewriteRule ^Eshop/BuyItem/([a-zA-Z0-9]+)/([a-zA-Z0-9_-_+_%_(_)_'_,_=]+)/$ eshop-buy.php?item=$2
+RewriteRule ^ACP/Inbox/([a-zA-Z0-9]+)$ ./ibox.php?auth=1 
+RewriteRule ^ACP/Inbox/$ ./ibox.php
+RewriteRule ^ACP/PassVerify/$   ilogin.php
+RewriteRule ^Buy-([a-zA-Z0-9_-_+_%_(_)_'_,]+).html$ buy.php?item=$1
+RewriteRule ^Buy-([a-zA-Z0-9_-_+_%_(_)_'_,]+)$ buy.php?item=$1
+RewriteRule ^Buy-([a-zA-Z0-9_-_+_%_(_)_'_,_=]+)$ buy.php?item=$1 
+RewriteRule ^Register/$ register.php
+RewriteRule ^Register/([a-zA-Z0-9_@_.]+)/([a-zA-Z]+)/$ register.php?char=$2&mail=$1
+RewriteRule ^Register$ register.php
+RewriteRule ^ForgotPass/$ forgot-password.php
+RewriteRule ^Logout.html$ logout.php
+RewriteRule ^TermOfServices/$ tos.php
+RewriteRule ^PrivacyPolicy/$ privac.php
+RewriteRule ^RefundPolicy/$ norefund.php
+RewriteRule ^Logout.html$ logout.php
+RewriteRule ^Staff/$ staff.php
+#RewriteRule ^Auction/View/$ auction-view.php
+#RewriteRule ^Auction/View/([a-zA-Z0-9_%_+_-]+)/$ auction-view.php?type=$1
+RewriteRule ^Auction/Buy/([a-zA-Z0-9]+)/$ new-auction-buy.php?id=$1
+RewriteRule ^Auction/$ new-auction.php
+
+#====================================== CHALLENGE 
+#RewriteRule ^Challenge/View/$ bet-view.php
+#RewriteRule ^Challenge/View/([a-zA-Z0-9_%_+_-]+)/$ Challenge-view.php?type=$1
+RewriteRule ^Challenge/Buy/([a-zA-Z0-9]+)/$ new-Challenge-buy.php?id=$1
+RewriteRule ^Challenge/$ new-bet.php
+#RewriteRule ^Challenge/View/$ bet-view.php
+#RewriteRule ^Challenge/View/([a-zA-Z0-9_%_+_-]+)/$ Challenge-view.php?type=$1
+RewriteRule ^Challenge/Buy/([a-zA-Z0-9]+)/$ new-bet-accept.php?id=$1
+RewriteRule ^Challenge/View/$ bet-view.php
+RewriteRule ^Challenge/View/([a-zA-Z0-9_%_+_-_,_(_)_=]+)$ bet-view.php
+RewriteRule ^Challenge/View/([a-zA-Z0-9_%_+_-_,_(_)_=]+)$ bet-view.php#$1
+RewriteRule ^Challenge/View/([a-zA-Z0-9_%_+_-]+)/$ bet-view.php?type=$1
+RewriteRule ^Challenge/Details/([a-zA-Z0-9]+)/$ new-bet-accept.php?id=$1
+
+#=======================================
+
+#RewriteRule ^Auction/View/$ auction-view.php
+#RewriteRule ^Auction/View/([a-zA-Z0-9_%_+_-]+)/$ auction-view.php?type=$1
+RewriteRule ^Auction/Buy/([a-zA-Z0-9]+)/$ new-auction-buy.php?id=$1
+RewriteRule ^Auction/$ new-auction.php
+
+RewriteRule ^Auction/View/$ beta-auction-view.php
+RewriteRule ^Auction/View/([a-zA-Z0-9_%_+_-_,_(_)_=]+)$ beta-auction-view.php
+RewriteRule ^Auction/View/([a-zA-Z0-9_%_+_-_,_(_)_=]+)$ beta-auction-view.php#$1
+RewriteRule ^Auction/View/([a-zA-Z0-9_%_+_-]+)/$ beta-auction-view.php?type=$1
+#RewriteRule ^Beta/Auction/Buy/([a-zA-Z0-9]+)/$ auction-buy.php?id=$1
+RewriteRule ^AuraWind/$ AuraWind.php
+RewriteRule ^ForgotPassword.html$ forgot-password.php
+RewriteRule ^Login-([0-9]+)$ login.php?logout=$1
+#RewriteRule ^Login/([A-Z0-9_%])$ login.php?next=$1
+RewriteRule ^Logout/(.*)/$ login.php?logout=1
+RewriteRule ^Login/Activated/$ login.php?act=1 
+RewriteRule ^verify-([0-9]).html$ login.php?verify=$1 
+RewriteRule ^Login/Error/$ login.php?err=1 
+RewriteRule ^Login/Ban/$ login.php?ban=1
+RewriteRule ^Login/Success/$ login.php?success=1
+RewriteRule ^ACP/UpgradeG9Unique/$ replace.php
+
+#API's
+
+RewriteRule ^API/Item/xml/([0-9]+)$ generate-api.php?type=item&output=xml&item=$1 
+RewriteRule ^API/Item/json/([0-9]+)$ generate-api.php?type=item&output=json&item=$1 
+RewriteRule ^API/Item/xml/$ generate-api.php?type=item&output=xml&item=-1 
+RewriteRule ^API/Item/json/$ generate-api.php?type=item&output=json&item=-1 
+
+RewriteRule ^API/Crafting/xml/([0-9]+)$ generate-api.php?type=crafting&output=xml&item=$1 
+RewriteRule ^API/Crafting/json/([0-9]+)$ generate-api.php?type=crafting&output=json&item=$1 
+RewriteRule ^API/Crafting/xml/$ generate-api.php?type=crafting&output=xml&item=-1 
+RewriteRule ^API/Crafting/json/$ generate-api.php?type=crafting&output=json&item=-1 
+
+
+RewriteRule ^API/Options/xml/([0-9_;_,]+)$ generate-api.php?type=options&output=xml&item=$1 
+RewriteRule ^API/Options/json/([0-9_;_,]+)$ generate-api.php?type=options&output=json&item=$1
+RewriteRule ^API/Options/xml/$ generate-api.php?type=options&output=xml&item=-1 
+RewriteRule ^API/Options/json/$ generate-api.php?type=options&output=json&item=-1 
+
+RewriteRule ^API/$ api.php
+
+
+
+#Admin rewrite
+
+RewriteRule ^Admin/ManageAccount/$ acct.php
+RewriteRule ^Admin/ViewAccount/(.*)/$ vacct.php?acc=$1
+RewriteRule ^Admin/EditAccount/(.*)/$ eacct.php?acc=$1
+RewriteRule ^Admin/ManageChar/$ char.php
+RewriteRule ^Admin/viewchar/(.*)/$ vchar.php?char=$1
+RewriteRule ^Admin/editchar/(.*)/$ echar.php?char=$1
+RewriteRule ^Admin/Givecoins/$ addc.php
+RewriteRule ^Admin/Auction/$ auction_log.php
+RewriteRule ^Admin/AuctionT/$ auctiont_log.php
+RewriteRule ^Admin/Ehistory/$ echker.php
+RewriteRule ^Admin/ManageItems/$ manageitem.php
+RewriteRule ^Admin/SearchItem/$ item.php
+RewriteRule ^Admin/ItemCodeList/$ iteminfo.php
+RewriteRule ^Admin/AddItems/$ additems.php
+RewriteRule ^Admin/SearchItem/$ item.php
+RewriteRule ^Admin/CopyInv/$ copyinv.php
+RewriteRule ^Admin/CopyStat/$ copystat.php
+RewriteRule ^Admin/InventoryAdmin/$ inventory.php
+RewriteRule ^Admin/StorageAdmin/$ storage.php
+RewriteRule ^Admin/PayPal/$ paypal_payments.php
+RewriteRule ^Admin/ReportPK/$ report_pk.php
+
+#RewriteCond %{THE_REQUEST} ^GET\ /[^?\s]+\.php[/?\s]
+#RewriteRule (.+)\.php$ /$1 [L,R=301]
+RewriteRule ^ini$ ini.php
+RewriteRule ^macchk$ macchk.php
+RewriteRule ^Stats/act_chars$ Stats/act_chars.php
+RewriteRule ^Stats/ajax_hate$ Stats/ajax_hate.php
+RewriteRule ^Stats/ajax_love$ Stats/ajax_love.php
+RewriteRule ^Stats/aonline$ Stats/aonline.php
+RewriteRule ^Stats/aonline_bkp$ Stats/aonline_bkp.php
+RewriteRule ^Stats/bhero$ Stats/bhero.php
+RewriteRule ^Stats/bonline$ Stats/bonline.php
+RewriteRule ^Stats/chkonline$ Stats/chkonline.php
+RewriteRule ^Stats/coins$ Stats/coins.php
+RewriteRule ^Stats/comments$ Stats/comments.php
+RewriteRule ^Stats/comments_count$ Stats/comments_count.php
+RewriteRule ^Stats/gall$ Stats/gall.php
+RewriteRule ^Stats/count$ Stats/count.php
+RewriteRule ^Stats/count_dlikes$ Stats/count_dlikes.php
+RewriteRule ^Stats/count_likes$ Stats/count_likes.php
+RewriteRule ^Stats/del$ Stats/del.php
+RewriteRule ^Stats/del_comment$ Stats/del_comment.php
+RewriteRule ^Stats/dlikes$ Stats/dlikes.php
+RewriteRule ^Stats/ecoin$ Stats/ecoin.php
+RewriteRule ^Stats/feat$ Stats/feat.php
+RewriteRule ^Stats/get_empty$ Stats/get_empty.php
+RewriteRule ^Stats/get_filledinvt$ Stats/get_filledinvt.php
+RewriteRule ^Stats/get_options$ Stats/get_options.php
+RewriteRule ^Stats/get_optionsjson$ Stats/get_optionsjson.php
+RewriteRule ^Stats/get_ratings$ Stats/get_ratings.php
+RewriteRule ^Stats/get_filledinvt$ Stats/get_filledinvt.php
+
+
+
+
+#AddType application/x-httpd-php .htm .html
+#RewriteRule ^(.*)\.html$ $1.php [nc]
+
+RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Bot\ mailto:craftbot@yahoo.com [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^ChinaClaw [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Custo [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^DISCo [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Download\ Demon [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^eCatch [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EirGrabber [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EmailSiphon [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EmailWolf [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Express\ WebPictures [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^ExtractorPro [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^EyeNetIE [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^FlashGet [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^GetRight [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^GetWeb! [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Go!Zilla [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Go-Ahead-Got-It [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^GrabNet [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Grafula [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^HMView [OR] 
+RewriteCond %{HTTP_USER_AGENT} HTTrack [NC,OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Image\ Stripper [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Image\ Sucker [OR] 
+RewriteCond %{HTTP_USER_AGENT} Indy\ Library [NC,OR] 
+RewriteCond %{HTTP_USER_AGENT} ^InterGET [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Internet\ Ninja [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^JetCar [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^JOC\ Web\ Spider [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^larbin [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^LeechFTP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Mass\ Downloader [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^MIDown\ tool [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Mister\ PiX [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Navroad [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NearSite [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NetAnts [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NetSpider [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Net\ Vampire [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^NetZIP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Octopus [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Offline\ Explorer [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Offline\ Navigator [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^PageGrabber [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Papa\ Foto [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^pavuk [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^pcBrowser [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^RealDownload [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^ReGet [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SiteSnagger [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SmartDownload [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SuperBot [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^SuperHTTP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Surfbot [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^tAkeOut [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Teleport\ Pro [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^VoidEYE [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Web\ Image\ Collector [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Web\ Sucker [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebAuto [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebCopier [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebFetch [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebGo\ IS [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebLeacher [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebReaper [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebSauger [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Website\ eXtractor [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Website\ Quester [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebStripper [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebWhacker [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WebZIP [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Wget [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Widow [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^WWWOFFLE [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Xaldon\ WebSpider [OR] 
+RewriteCond %{HTTP_USER_AGENT} ^Zeus 
+RewriteRule ^.* - [F,L]
+
+## Image Hot Linking
+
+##RewriteCond %{HTTP_REFERER} !^http://(.+\.)?a3ultimate\.com/ [NC]
+##RewriteCond %{HTTP_REFERER} !^$
+##RewriteRule .*\.(jpg|gif|bmp|png)$ /images/dontsteal.jpg [L]
+
+##RewriteCond %{HTTP_REFERER} !^http://(.+\.)?a3ultimate\.com/ [NC]
+##RewriteCond %{HTTP_REFERER} !^http://(.+\.)?google\.(.+)/ [NC]
+##RewriteCond %{HTTP_REFERER} !^http://(.+\.)?(.*\.)?google\.(.+)/ [NC]
+##RewriteCond %{HTTP_REFERER} !^http://(.+\.)?bing\.(.+)/ [NC]
+##RewriteCond %{HTTP_REFERER} !^http://(.+\.)?(.*\.)?bing\.(.+)/ [NC]
+##RewriteCond %{HTTP_REFERER} !^http://(.+\.)?yahoo\.(.+)/ [NC]
+##RewriteCond %{HTTP_REFERER} !^http://(.+\.)?(.*\.)?yahoo\.(.+)/ [NC]
+##RewriteCond %{HTTP_REFERER} !^$
+##RewriteRule .*\.(jpe?g|gif|png)$ /images/donotsteal.jpg [L]
+
+
+</IfModule>
+
+#-----------------------------------------------new-----------------------------#
+php_value date.timezone Asia/Kolkata
+
+# 480 weeks
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|ttf|eot|woff|otf)$">
+Header set Cache-Control "max-age=290304000, public"
+</FilesMatch>
+
+# 2 DAYS
+<FilesMatch "\.(xml|txt)$">
+Header set Cache-Control "max-age=172800, public, must-revalidate"
+</FilesMatch>
+
+# 2 HOURS
+<FilesMatch "\.(html|htm|php)$">
+Header set Cache-Control "max-age=7200, must-revalidate"
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|xml|gz)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+<IfModule mod_mime.c>
+ AddType application/x-javascript .js
+ AddType text/css .css
+</IfModule>
+
+<IFModule mod_deflate.c>
+<filesmatch "\.(js|css|html|jpg|png|php)$">
+SetOutputFilter DEFLATE
+</filesmatch>
+</IFModule>	
+#---------------------------------Settings-----------------------------------#
+## EXPIRES CACHING ##
+# <FilesMatch "!\.(gif|css|js|jpg|jpe?g|png)$">
+#     php_value session.cookie_domain www.a3ultimate.com
+# </FilesMatch>
+ErrorDocument 401 /404.php
+ErrorDocument 404 /404.php
+ErrorDocument 403 /404.php
+ErrorDocument 500 /404.php
+
+<FilesMatch "\.(html?|txt)$">
+  ForceType 'text/html; charset=UTF-8'
+</FilesMatch>
+
+<FilesMatch "\.(css)$">
+  ForceType 'text/css; charset=UTF-8'
+</FilesMatch>
+
+<FilesMatch "\.(js)$">
+  ForceType 'text/javascript; charset=UTF-8'
+</FilesMatch>
+
+<FilesMatch "\.(css|js)$">
+  Header append Vary Accept-Encoding
+</FilesMatch>
+
+# log to file
+php_flag log_errors on
+php_value error_log /errors/php_errors.log
+
+<FilesMatch "^.*?api.*?$">
+SetHandler php5-script
+</FilesMatch> 
+Options -Indexes

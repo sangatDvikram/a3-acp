@@ -1,0 +1,13 @@
+var MorrisChart=function(){
+"use strict";
+return{
+init:function()
+{
+handleMorrisLineChart();
+handleMorrisBarChart();
+handleMorrisAreaChart();
+handleMorrisDonusChart();
+handleMorrisDailyChart()
+}
+}
+}()

@@ -1,0 +1,188 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  body {
+    width: 100%;
+  }
+
+	#addnewcomment{
+	padding: 10px 20px;
+	margin: auto;
+	width: 30%;
+	display: block;
+	overflow: auto;
+	}
+
+
+
+}
+		body {
+			font-size: 15px;
+			color: #343d44;
+			font-family: "segoe-ui", "open-sans", tahoma, arial;
+			padding: 0;
+			margin: 0;
+		}
+		table {
+			margin: auto;
+			font-family: "Lucida Sans Unicode", "Lucida Grande", "Segoe Ui";
+			font-size: 12px;
+		}
+
+		h1 {
+			margin: 25px auto 0;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 17px;
+		}
+
+		table td {
+			transition: all .5s;
+		}
+		
+		/* Table */
+		.data-table {
+			-moz-user-select: none; 
+			-webkit-user-select: none; 
+			-ms-user-select:none; 
+			user-select:none;
+			-o-user-select:none;
+			border-collapse: collapse;
+			font-size: 14px;
+			min-width: 200px;
+		}
+
+		
+		.data-table th, 
+		.data-table td {
+			border: 1px solid #e1edff;
+			padding: 7px 17px;
+		}
+		.data-table caption {
+			margin: 7px;
+		}
+
+		/* Table Header */
+		.data-table thead th {
+			background-color: #508abb;
+			color: #FFFFFF;
+			border-color: #6ea1cc !important;
+			text-transform: uppercase;
+		}
+
+		/* Table Body */
+		.data-table tbody td {
+			color: #353535;
+		}
+		.data-table tbody td:first-child,
+		.data-table tbody td:nth-child(4),
+		.data-table tbody td:last-child {
+			text-align: right;
+		}
+
+		.data-table tbody tr:nth-child(odd) td {
+			background-color: #f4fbff;
+		}
+		.data-table tbody tr:hover td {
+			background-color: #ffffa2;
+			border-color: #ffff0f;
+		}
+
+		
+		/* Table Footer */
+		.data-table tfoot th {
+			background-color: #e5f5ff;
+			text-align: right;
+		}
+		.data-table tfoot th:first-child {
+			text-align: left;
+		}
+		.data-table tbody td:empty
+		{
+			background-color: #ffcccc;
+		}
+
+		.container{
+			width:100%;
+		
+		}
+
+		.addnewform
+		{
+			margin: auto;
+		}
+
+		.addnewform input, .addnewform select, .addnewform input[type="submit"]{
+			display: block;
+			padding: 10px 20px;
+			margin: auto;
+			width: 30%;
+			overflow: auto;
+		}
+
+		#addnewcomment[title]{
+    		font-style: italic;
+    		color:gray;
+		}
+
+		#addnewcomment, #optdesc{
+			padding: 10px 20px;
+			margin: auto;
+			width: 30%;
+			display: block;
+			overflow: auto;
+		}
+		.addnewform select{
+			margin: auto;
+			width: 35%;
+			overflow: auto;
+		}
+		.addnewform input[type="submit"]
+		{
+			margin: auto;
+			width: 20%;
+			white-space: normal;
+			border: none;
+			background-color: #508abb;
+			color:white;
+			overflow: auto;
+		}
+
+		#cash_recieved_btn, #exp_btn, #cash_given_btn
+		{
+
+			margin: auto;
+			width: 22%;
+			min-width: 98px;
+			font-size: 0.8em;
+			padding: 10px 20px;
+			border: none;
+			height: 50px;
+			white-space: normal;
+			background-color: #CC5803;
+			color:white;
+			overflow: auto;	
+		}
+
+		.refbtn{
+			padding: 20px;
+			position: fixed;
+			height: auto;
+			left: 0%;
+			z-index: 1;
+			background-color: #508abb;
+			width: 15%;
+			border: none;
+			color:white;
+			overflow: auto;
+
+		}
+		.error{
+			margin: auto;
+			display: block;
+			padding: 15px 20px;
+			color: #E74C3C;
+			text-align: center;
+			border: 1px solid #E74C3C;
+			background-color: #F5B7B1;
+			width: 30%;
+			transition: 0.5s ease;
+		}

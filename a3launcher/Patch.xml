@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Patch>
+  <PatchElement>
+    <Name>UltimateLauncher.exe</Name>
+    <Size>295424</Size>
+    <Hash>5a13fe6f2f97357599b87cfe21b595e6</Hash>
+  </PatchElement>
+  <AllFiles>1</AllFiles>
+  <AllSize>295424</AllSize>
+</Patch>
