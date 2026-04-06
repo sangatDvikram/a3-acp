@@ -1,0 +1,47 @@
+/* Style Sheet for Vynx Web 2012 
+Vynx Web 2012 by Blackbullett */
+
+.rankingh
+{
+	width:40px;
+	height:20px;
+	font-size:16px;
+	text-align:center;
+	color:#ffffff;
+	background-color:#111111;
+	border-color:#d1a55f;
+}
+
+.rankingx
+{
+	width:200px;
+	height:20px;
+	font-size:20px;
+	text-align:center;
+	color:#333333;
+	background-color:#000000;
+	border-color:#ffffff;
+}
+
+.rankingy
+{
+	width:160px;
+	height:30px;
+	font-size:20px;
+	text-align:center;
+	color:#ffffff;
+	background-color:#d3a55f;
+	border-color:#3c1b0f;
+}
+
+.rankingc
+{
+	width:160px;
+	height:30px;
+	font-size:14px;
+	text-align:center;
+	color:#3c1b0f;
+	background-color:#d1a55f;
+	border-color:#3c1b0f;
+}
+
