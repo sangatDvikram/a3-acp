@@ -8,7 +8,7 @@ RUN a2dismod mpm_event || true
 RUN printf "deb http://archive.debian.org/debian/ stretch main\ndeb http://archive.debian.org/debian-security stretch/updates main\n" \
     > /etc/apt/sources.list && \
     apt-get -o Acquire::Check-Valid-Until=false update && \
-    apt-get install -y --allow-unauthenticated zlib1g-dev libzip-dev && \
+    apt-get install -y --allow-unauthenticated zlib1g-dev libzip-dev curl && \
     rm -rf /var/lib/apt/lists/*
 
 # PHP extensions
@@ -39,5 +39,8 @@ RUN echo 'Listen ${PORT}' > /etc/apache2/ports.conf && \
     sed -i 's/<VirtualHost \*:80>/<VirtualHost *:${PORT}>/' /etc/apache2/sites-enabled/000-default.conf
 
 EXPOSE 80
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+    CMD curl -f http://localhost:${PORT:-80}/ || exit 1
 
 CMD ["apache2-foreground"]
