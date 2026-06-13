@@ -3,11 +3,12 @@ FROM php:5.6-apache
 # Enable Apache modules required by .htaccess
 RUN a2enmod rewrite headers deflate expires
 
-# System libs required by PHP extensions
-RUN apt-get update && apt-get install -y \
-    zlib1g-dev \
-    libzip-dev \
-    && rm -rf /var/lib/apt/lists/*
+# Debian Stretch EOL — overwrite sources.list with archive mirror
+RUN printf "deb http://archive.debian.org/debian/ stretch main\ndeb http://archive.debian.org/debian-security stretch/updates main\n" \
+    > /etc/apt/sources.list && \
+    apt-get -o Acquire::Check-Valid-Until=false update && \
+    apt-get install -y zlib1g-dev libzip-dev && \
+    rm -rf /var/lib/apt/lists/*
 
 # PHP extensions
 RUN docker-php-ext-install mysqli pdo pdo_mysql zip
