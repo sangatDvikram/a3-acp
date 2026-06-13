@@ -38,7 +38,7 @@ an integrated bug/support-ticket tracker.
 ### Back-end
 | Technology | Role |
 |---|---|
-| **PHP** (5.x / 7.x — see XAMPP version) | Primary server-side language for the portal |
+| **PHP 5.6.40** | Primary server-side language for the portal |
 | **CodeIgniter 2.x** | MVC framework powering the `beta/` application |
 | **ODBC / SQL Server** | Primary game database (`webasdOdbc`, `webasdItemEvent` DSNs) |
 | **MySQL / MariaDB** | Auxiliary ACP database |
@@ -208,7 +208,7 @@ See `.env.example` for full documentation of every variable.
 
 | Software | Recommended version | Notes |
 |---|---|---|
-| XAMPP | 7.x or 8.x | Bundles Apache, PHP, MySQL |
+| XAMPP | 5.6.x (`xampp2`) — PHP **5.6.40** | Bundles Apache, PHP, MySQL |
 | SQL Server (or compatible) | Any | Required for the ODBC game DB |
 | ODBC Driver for SQL Server | 17 or 18 | Windows ODBC Data Source Administrator |
 | Composer | Latest | PHP dependency manager |
