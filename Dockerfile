@@ -1,8 +1,8 @@
 FROM php:5.6-apache
 
 # Enable Apache modules required by .htaccess
-RUN a2enmod rewrite headers deflate expires
-RUN a2dismod mpm_event || true
+RUN a2dismod mpm_event mpm_worker mpm_prefork || true && \
+    a2enmod mpm_prefork rewrite headers deflate expires
 
 # Debian Stretch EOL — overwrite sources.list with archive mirror
 RUN printf "deb http://archive.debian.org/debian/ stretch main\ndeb http://archive.debian.org/debian-security stretch/updates main\n" \
