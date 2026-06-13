@@ -3,6 +3,12 @@ FROM php:5.6-apache
 # Enable Apache modules required by .htaccess
 RUN a2enmod rewrite headers deflate expires
 
+# System libs required by PHP extensions
+RUN apt-get update && apt-get install -y \
+    zlib1g-dev \
+    libzip-dev \
+    && rm -rf /var/lib/apt/lists/*
+
 # PHP extensions
 RUN docker-php-ext-install mysqli pdo pdo_mysql zip
 
